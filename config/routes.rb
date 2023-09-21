@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  post 'auth/:provider/callback', to: 'api/v1/users#create'
+  delete 'users/:email', to: 'api/v1/users#destroy', constraints: { email: %r{[^/]+} }
+
 end
