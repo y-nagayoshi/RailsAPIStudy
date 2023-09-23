@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Forest.destroy_all
+Trail.destroy_all
+
+forest1 = Forest.create(name: "Black Forest", state: "Colorado")
+
+
+trail1 = Trail.create(name: "Section 16", state: "test")
